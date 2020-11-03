@@ -1,0 +1,48 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each links}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <p class="m-2">Modelo: {{modelo}}</p>
+                    <p class="m-2">Marca: {{marca}}</p>
+                    <p class="m-2">Patente: {{patente}}</p>
+                    <p class="m-2">Año: {{anio}}</p>
+                    <p>{{timeago created_at}}</p>
+                    <a href="/links/delete/{{id}}" class="btn btn-danger">Eliminar Auto</a>
+                    <a href="/links/edit/{{id}}" class="btn btn-secondary">Editar</a>
+                    <a href="/links/turno/{{id}}" class="btn btn-secondary">Turno</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="com-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No hay Autos guardados</p>
+                <a href="/links/add">Agrega Uno!</a>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4  mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/add" method="GET">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="string" placeholder="Articulo a buscar" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Buscar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

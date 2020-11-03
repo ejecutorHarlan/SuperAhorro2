@@ -1,0 +1,186 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4  mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/links/turno/{{link.id}}" method="POST">
+                        {{!-- <div class="form-group">
+                            <input type="text" value="{{link.modelo}}" class="form-control" name="modelo"
+                                placeholder="Modelo" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{link.marca}}" name="marca" class="form-control"
+                                placeholder="Marca">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{link.patente}}" name="patente" class="form-control"
+                                placeholder="Patente">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{link.anio}}" name="anio" class="form-control" placeholder="Año">
+                        </div> --}}
+
+
+
+                        <div class="card text-center">
+
+
+                            <div class="card-body">
+                                <p class="m-2">Modelo: {{link.modelo}}</p>
+                                <p class="m-2">Marca: {{link.marca}}</p>
+                                <p class="m-2">Patente: {{link.patente}}</p>
+                                <p class="m-2">Año: {{link.anio}}</p>
+                                <p>{{timeago created_at}}</p>
+                            </div>
+                        </div>
+
+
+                        {{!-- <div class="form-group">
+                        <textarea name="description" rows="2" class="form-control" placeholder="description">{{link.description}}</textarea>
+                    </div> --}}
+
+
+
+
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://rawgit.com/tempusdominus/bootstrap-4/master/build/js/tempusdominus-bootstrap-4.js"></script>
+<link href="https://rawgit.com/tempusdominus/bootstrap-4/master/build/css/tempusdominus-bootstrap-4.css"
+    rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-sm-4 mx-auto">
+            <div class="form-group">
+                <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                    <span class="input-group-addon" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+                <div class="form-group">
+                        <button class="btn btn-success btn-block">
+                            Guardar Turno
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.4/js/bootstrap-datetimepicker.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.4/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>                       
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+ --}}
+
+
+{{!-- 
+
+<script>
+    $(document).ready(function () {
+        var picker = $('#datetimepicker7').datetimepicker();
+
+        console.log(picker.datetimepicker('data-view-date'));
+        console.log($('#datetimepicker7').datetimepicker('data-show'));
+
+        $("#tog").on('click', function () {
+            console.log($('#datetimepicker7').data('DateTimePicker'));
+            console.log($('#datetimepicker7').data('DateTimePicker').getDate());
+        })
+
+    });
+</script>
+
+
+<div class="container">
+  <div class='col-md-5'>
+    <div class="form-group">
+      <div class="input-group date" id="datetimepicker7" data-target-input="nearest">
+        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker7" />
+        <span class="input-group-addon" data-target="#datetimepicker7" data-toggle="datetimepicker">
+                    <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <a href="#." id="tog">toggle</a>
+</div> --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+
+
+
+<div class="container">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <div class="input-group date" id="datetimepicker12" data-target-input="nearest">
+                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker12" />
+                <div class="input-group-append" data-target="#datetimepicker12" data-toggle="datetimepicker">
+                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker12').datetimepicker({
+                daysOfWeekDisabled: [0, 6]
+            });
+        });
+    </script>
+</div>
